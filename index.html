@@ -28,13 +28,15 @@
       background-color: rgba(184, 224, 240, 0.8); /* Slightly transparent light blue navigation */
       padding: 10px;
       text-align: center;
+      overflow: auto; /* Add overflow to prevent overlapping tabs */
     }
 
     nav a {
       color: #1F7CA8; /* Darker blue links */
       text-decoration: none;
-      padding: 10px 20px;
-      cursor: pointer;
+      padding: 10px;
+      margin: 5px; /* Add margin to separate tabs */
+      display: inline-block; /* Ensure each tab is on a separate line */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -46,7 +48,7 @@
     main {
       background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white main content area */
       padding: 20px;
-      margin: 20px auto;
+      margin: 20px auto; /* Center the main content */
       border-radius: 10px;
       max-width: 800px;
     }
@@ -128,6 +130,15 @@
 
     @media (max-width: 600px) {
       /* Adjust styles for smaller screens */
+      nav {
+        display: block;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px auto;
+      }
+
       main {
         margin: 10px;
       }
@@ -177,6 +188,7 @@
     const modal = document.getElementById('myModal');
     const modalImg = document.getElementById('modalImg');
     const modalCaption = document.getElementById('modalCaption');
+    const
     const close = document.querySelector('.close');
 
     img.onclick = function() {
