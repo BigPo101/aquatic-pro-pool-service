@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | aquatic pro pool service, LLC</title>
+  <style>
+    /* Pool-themed styles */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: url('pool.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    header {
+      background-color: rgba(31, 124, 168, 0.8); /* Slightly transparent darker blue header */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: rgba(184, 224, 240, 0.8); /* Slightly transparent light blue navigation */
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #1F7CA8; /* Darker blue links */
+      text-decoration: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #1F7CA8;
+      color: #fff;
+    }
+
+    main {
+      background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white main content area */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #1F7CA8; /* Darker blue headings */
+    }
+
+    form {
+      background-color: rgba(184, 224, 240, 0.8); /* Slightly transparent light blue form background */
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    form input, form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #1F7CA8;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #155e7a;
+    }
+
+    footer {
+      background-color: rgba(31, 124, 168, 0.8); /* Slightly transparent darker blue footer */
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('nav a');
+
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.body.style.opacity = 0;
+          setTimeout(() => {
+            window.location.href = this.getAttribute('href');
+          }, 500);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Aquatic Pro Pool Service, LLC</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Pool Openings</a>
+    <a href="#">Weekly Cleaning</a>
+    <a href="#">Vacation Coverage</a>
+    <a href="#">Pool Closings</a>
+    <a href="#">Pool Gallery</a>
+  </nav>
+  <main>
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024 Aquatic Pro Pool Service, LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>

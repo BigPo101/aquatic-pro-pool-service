@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Aquatic Pro Pool Service, LLC</title>
+  <style>
+    /* Pool-themed styles */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: url('pool.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
+    header {
+      background-color: rgba(31, 124, 168, 0.8); /* Slightly transparent darker blue header */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: rgba(184, 224, 240, 0.8); /* Slightly transparent light blue navigation */
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #1F7CA8; /* Darker blue links */
+      text-decoration: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1F7CA8;
+      color: #fff;
+    }
+
+    main {
+      background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white main content area */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #1F7CA8; /* Darker blue headings */
+    }
+
+    .image-container {
+      margin-top: 20px;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .image-container figcaption {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #1F7CA8;
+    }
+
+    footer {
+      background-color: rgba(31, 124, 168, 0.8); /* Slightly transparent darker blue footer */
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 800px;
+      text-align: center;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .modal-content img {
+      width: 100%;
+      max-width: 100%; /* Adjust the max-width to your preference */
+      height: auto;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aquatic Pro Pool Service, LLC</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Pool Openings</a>
+    <a href="#">Weekly Cleaning</a>
+    <a href="#">Vacation Coverage</a>
+    <a href="#">Pool Closings</a>
+    <a href="#">Pool Gallery</a>
+  </nav>
+  <main>
+    <h2 style="text-align: center;">Welcome to Aquatic Pro Pool Service!</h2>
+    <p>We offer a wide range of pool services to meet all your needs.</p>
+    <div class="image-container">
+      <img id="myImg" src="poolkids.webp" alt="A beautiful swimming pool">
+      <figcaption>A beautifully maintained swimming pool by Aquatic Pro Pool Service.</figcaption>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Aquatic Pro Pool Service, LLC. All rights reserved.</p>
+  </footer>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImg" alt="">
+      <figcaption id="modalCaption"></figcaption>
+    </div>
+  </div>
+
+  <script>
+    const img = document.getElementById('myImg');
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalCaption = document.getElementById('modalCaption');
+    const close = document.querySelector('.close');
+
+    img.onclick = function() {
+      modal.style.display = 'block';
+      modalImg.src = this.src;
+      modalCaption.textContent = this.nextElementSibling.textContent;
+    }
+
+    close.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
