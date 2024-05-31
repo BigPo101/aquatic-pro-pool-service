@@ -25,20 +25,23 @@
     }
 
     nav {
-      background-color: rgba(184, 224, 240, 0.8); /* Slightly transparent light blue navigation */
-      padding: 10px;
-      text-align: center;
-      overflow: auto; /* Add overflow to prevent overlapping tabs */
-    }
+  background-color: rgba(184, 224, 240, 0.8); /* Slightly transparent light blue navigation */
+  padding: 10px;
+  text-align: center;
+  overflow: auto; /* Add overflow to prevent overlapping tabs */
+  transition: background-color 0.3s ease; /* Add transition effect */
+  }
+
 
     nav a {
-      color: #1F7CA8; /* Darker blue links */
-      text-decoration: none;
-      padding: 10px;
-      margin: 5px; /* Add margin to separate tabs */
-      display: inline-block; /* Ensure each tab is on a separate line */
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+  color: #1F7CA8; /* Darker blue links */
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px; /* Add margin to separate tabs */
+  display: inline-block; /* Ensure each tab is on a separate line */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+  }
+
 
     nav a:hover {
       background-color: #1F7CA8;
